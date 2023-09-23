@@ -319,3 +319,6 @@ IQ: How many branches are you supporting in your projects?
    Change most recent Git commit message.
 
    git log --author
+
+   git revert:
+    $git revert Commit ID 
