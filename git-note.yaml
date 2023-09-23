@@ -1,0 +1,270 @@
+United Core    Zelle:
+======================  
+Develops, Tests, Builds, deploys & monitors applications 
+    Applications are the output from Softwares  
+
+    Zelle:  
+   Releases:
+   Releasing an application is taking/deploying it to the client
+   In realtime we have multiple Releases.  
+
+
+   Release Code1 = version 1  = 1000 lines of code
+   echo "Welcome to Zelle"
+
+  Release Code2 = version 2   = 2000 lines of codes
+  echo "Welcome to Zelle"  
+  echo "Your convenient payment gateway"
+
+  Release Code3  = version 3  = 3000 lines of code  
+  echo "Welcome to Zelle"  
+  echo "Your convenient payment gateway"
+  echo "Zellers the best payment gateway"
+
+
+Rollout   --> version1 --> version2 ---> version3
+
+RollBack  --> version3 --> version2 
+
+
+The client is not happy with the latest version of the application.   
+What can we do??? RollBack
+
+Versioning in Software Development:
+  ==================================
+
+  Version control systems = VCS:
+  Local = version1, 
+          version2,[5000LINES ] 
+          version3 [2000LINES ] 
+  Cons: Single point of failure
+         lacks collaboration
+         in-efficient use of resources including time  
+         can't RollBack
+
+
+         Centralised:
+    cons: can't RollBack
+          The central server can fail 
+
+          Distributed VCS:
+        ====================
+
+Distributed VCS:
+  ===============
+
+GitHub is a web-based platform that provides a hosting service for Git 
+repositories. It allows developers to store, manage, and collaborate on 
+code projects. GitHub was founded in 2008 and has grown to become one of 
+the most popular code hosting platforms in the world. GitHub is built on 
+top of Git, a distributed version control system. It allows developers to 
+track and manage changes to their codebase, create branches, merge changes,
+and revert to previous versions. Git's distributed nature enables multiple 
+developers to work on the same project simultaneously and synchronize their 
+changes.
+
+GIT: DVCs 
+  Distributed Version Control system 
+  - Git manage data as snapshots. 0 / 10 / 20 / 30 / 40 / 50 / 60 / 
+  - It takes a picture of what all your files look like 
+     at that moment and stores 
+    a reference to that snapshot.
+
+  Benefits: Nearly every operation is local
+            git has data intergrity
+            Git generally only adds data
+
+
+            Zelle, BOA, Macy's ........
+
+  Deploy.java
+    echo "Welcome to Zelle"                    = Isaac
+    echo "Zelle your payment gateway"          = Ben        
+    echo "Zelle is the gateway of the future"  = UnitedCore   
+    echo "Zelle is offering 30% discount"      = Emma
+    echo "Good deals for returning clients"     = Theo
+  
+
+  other DVCs:
+SVN --> Sub Version
+CVS --> Concurrent Version system
+TFS --> Team Foundation Server
+Git --> 95% plus of companies are using GIT   
+
+SCM = Source Code management
+=======================-====  
+SCM service plaforms :
+  GitHub - MS
+  GitLab
+  BitBucket (Stash) - A
+  awsCodeCommit 
+
+  IQ: As a DevOps Engineer, what are your roles & responsilities in Versioning with Git?
+
+  Answer:
+  1. We ensure that Developers environments are configured and secured 
+     We create an enabling environment for Developers to code/Develope
+       DevelopmentServers are created in AWS.  
+       share login details with Developers/Team [ userName/password ]  
+       Ensure that git package/Software is installed 
+
+  2. Project Onboarding: 
+       Create organisations where applicable in a SCM  
+       Create repositories in SCM [GitHub] 
+       Create teams in SCM and assign members[Developers, etc.] 
+
+3. Zelle: 
+  1. Create a github account where applicable - 1:200 [0.5%]
+        https://github.com/
+        Email address: unitedcoresystems@gmail.com  or isaac.ntim@unicoresys.com   
+        userName: unitedcore    
+        password: Admin123
+
+  2. Create organisation in your GitHub account for the client [Zelle]
+        userName: unitedcore    
+        password: Admin123    
+        organisation url =  https://github.com/UnitedCoreSystems
+
+. Create project TEAM(S) and add members & collaborators and 
+         url = https://github.com/orgs/UnitedCoreSystems/teams/Zelle   
+
+  4. assign roles to Team members using 
+     security best practices including Least Priviledges  
+
+  4. Create repositories in the GitHub organisation for the client  
+       url = https://github.com/UnitedCoreSystems/Zelle     = public 
+       url = https://github.com/UnitedCoreSystems/Zelle-be  = private  
+
+  6. Ensure that Git and relevant IDEs are installed by Developers
+
+
+  United Core Class2023Teams:
+Project:
+  1a. Create your GitHub account 
+  1b. Onboard our new project for unitedtech a FinTech Client
+
+  2. Managers and assistant
+       Create a Team in your created organisation for Zelle and add members of your 
+       your group with write access 
+
+
+Git Commands:
+
+Basic git config (~/.gitconfig)
+===================================
+git config --global user.name "Isaac Ntim"
+git config --global user.email "unitedcoresystem@gmail.com"
+
+to check 
+git config --list
+
+git config --global core.editor "/urs/bin/nano"
+
+Mkdir {nameofdiretory}
+cd [nameofdirectory]
+
+git init
+git status
+git log
+git add
+git commits
+git push 
+
+ 
+    create a Local repository [.git]  
+git add 
+  
+Isaac Hologic@Isaac-DevOps MINGW64 ~/united2023 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+workingArea  stagingArea LocalRepo RemoteRepo
+
+working area        staging     localRepo     RemoteRepo[GitHub]    :
+  -----------        -------      ---------     ------------------  
+  Untracked files     git add     git commit    git push 
+    red                green     
+
+
+git init          = to initialised a git empty repository
+                    create the default branch[master]
+git status        = to track files location
+git log           = list all commits  
+git add .           = move files to staging area from working area
+git commit -m     = move files to the local repository FROM STAGING AREA
+                    good commit message for tracking changes/authors 
+    
+
+20 September 2023:
+===================
+
+Deploy.java
+    echo "Welcome to Zelle"                    = Isaac
+    echo "Zelle your payment gateway"          = Ben        
+    echo "Zelle is the gateway of the future"  = UnitedCore   
+    echo "Zelle is offering 30% discount"      = Emma
+    echo "Good deals for returning clients"     = Theo
+
+Repository:
+    https://github.com/UnitedCore-Class2023/Deploy.java.git
+
+creat a directory
+git init 
+git status
+git add . 
+git commit -m "comments"
+git remote add origin https://github.com/UnitedCore-Class2023/Deploy.java.git
+git push -u origin master
+
+
+Git Branch :
+ git branch [name]
+
+ git branch --list
+
+  Master
+  stage branches
+  development
+  main
+
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+  ssh-keygen -t ed25519 -C "unitedcoresystems@gmail.com"
+
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIcxxmAe/NYZ29/r+turtCppTdkdDzo9M4kqkeljXB1r unitedcoresystems@gmail.com
+
+
+  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    git token
+
+  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOV16gpdi2UhFrrDPSKnkV8+/eO6l8cDmp65S4BpD2sG unitedcoresystems@gmail.com
+   tempserver
+
+   UnitedCore-Class2023
+
+  Git fetch                           <-------------------
+  git merge    
+  git pull <------------------------------------------------------
+   
+  git init          = to initialised a git empty repository
+  git status        = to track files location
+  git log           
+  git add           = move files to staging area from working area
+  git commit -m     = move files to the local repository FROM STAGING AREA
+                      good commit message for tracking changes/authors 
+
+git commit -m "users list created"
+git push RemoteRepo master 
+=================================================:
+
+23 September 2023:
+
+==================
+creating of a file and push github
+
+
+
