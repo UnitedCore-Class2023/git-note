@@ -264,7 +264,51 @@ git push RemoteRepo master
 23 September 2023:
 
 ==================
-creating of a file and push github
+creating of a file and push github:
+
+create a directory called class2023
+
+$ mkdir class2023
+$ cd class2023
+$ touch / vi git-note
+$ git init
+$ git status
+
+Staging:
+git add .  / git add fileName / git add *.txt
+
+UnStaging:
+git commit -m "comments" / git commit -a -m "comments"
+git status to check if your working tree is clean
+git remote add origin https://github.com/UnitedCore-Class2023/Deploy.java.git
+
+erify the branch---------- git branch
+
+Rename:
+$ git branch -M main = rename branch
+git push -u origin master
+
+Git Branch :
+Git branch branchName   = creates a new branch
+git branch development  = created the development branch 
+
+ git branch [name]
+ git branch --list
+
+ Create these branches:
+Master
+stage branches
+development
+main
 
 
+Switching and creating new branches: 
+-------------------------
+
+
+How to delete branches:
+
+main===1000
+dev=== 1000    dev===2000s -a
+    
 
