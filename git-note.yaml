@@ -310,5 +310,55 @@ How to delete branches:
 
 main===1000
 dev=== 1000    dev===2000s -a
+
+Switching and creating new branches: 
+-------------------------
+git checkout -b (branch) : lets you exit your current, then create and switch to new branch   
+
+$ git checkout -b <new branch>
+
+How to delete branches:
+$ git branch -d <branchname>
+
+Switching Branch:
+Switching between branches: 
+-------------------------
+git checkout  : lets you exit your current branch to the branchname specified  
+$ git checkout <branchname>  
+git switch master
+git checkout branchName
+git diff development 
+git merge development
+  merging branches: 
+-----------------
+ git merge : lets your merge to content in one branch onto another branch 
+ 
+$ git merge <branchname>
+
+Note* you will have to be in the current branch in which you wish to merge to 
+
+
+git push aliasName --all  = push changes to all branches 
+git push pay --all 
+
+IQ: How many branches are you supporting in your projects?
+    Branches are used to create lines of development in git. 
+    A branch is a line development 
+  We maintain a minimun of 3 branches:
+        development branch  
+           app.java     
+        staging branch  
+           app.java
+        master branch  
+           app.java
+
+git branch  = list all the branches [lines of development]
+git branch branchName  = create a new branch     
+git checkout branchName = switch branches 
+
+git fetch --> It brings changes in the code to the LocalRepo
+git pull --> It brings changes in the code to the Working area 
+git clone --> It brings the entire code to the working area 
+
     
 
